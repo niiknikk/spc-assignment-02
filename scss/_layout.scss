@@ -1,0 +1,321 @@
+// section-header
+.header {
+  position: relative;
+  width: 100vw;
+  min-height: 90vh;
+  // background: linear-gradient(19deg, $color-1, $color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, $color-3 0%, $color-5 74%);
+  
+
+  &-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+  }
+  &-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+    @include respond(tab-land) {
+      padding-bottom: 5rem;
+    }
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+    @include respond(phone) {
+      padding: 0;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  &-content {
+    height: 100%;
+    padding: 4rem 2rem;
+    padding-left: 8rem;
+
+    & p {
+      margin: 2rem 0;
+    }
+    @include respond(tab-port) {
+      padding: 0;
+      padding-top: 5rem;
+      text-align: center;
+    }
+  }
+  &-img {
+    @include respond(phone) {
+      width: 100%;
+      // padding: 2rem 0;
+    }
+    &-lotty {
+      width: 750px;
+
+      @include respond(tab-land) {
+        width: 600px;
+      }
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// section-form
+
+.section-form {
+  position: relative;
+
+  padding: 5rem 0;
+  background-color: #eee;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-hero{
+        width: 90%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0 ;
+        border-radius: 1rem;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        @include respond(phone){
+          width: 95%;
+          
+        }
+}
+
+.form-img{
+    padding-left: 4rem;
+    &-lotty {
+        text-align: right;
+        width: 400px;
+  
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+    }
+.form-container {
+  width: 100%;
+  display: flex;;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(phone){
+      width: 100%;
+  }
+
+}
+
+
+.form {
+  margin-top: 1rem;
+  width: 60%;
+  @include respond(tab-land) {
+    width: 80%;
+  }
+  @include respond(phone) {
+    width: 90%;
+  }
+}
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-family: $ff-lato;
+}
+
+.form-control {
+  margin-bottom: 2.5rem;
+}
+
+input,
+textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2.5rem;
+  padding: 1rem;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid $color-1;
+}
+textarea {
+  resize: none;
+}
+
+label {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+small {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.4rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid $color-1;
+  -webkit-text-fill-color: $color-1;
+  box-shadow: 0 0 0px 1000px #eee inset;
+  -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// section-testimonial
+
+.section-testimonial {
+  position: relative;
+  padding: 2rem;
+  padding-top: 5rem;
+  background: linear-gradient(19deg, $color-5, $color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+
+  & h1 {
+    color: $color-2;
+    margin-bottom: 5rem;
+  }
+}
+.testimonial-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.testimonial-content {
+  position: relative;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $ff-lato;
+  padding-bottom: 4rem;
+
+  & h3 {
+    color: $color-2;
+    font-weight: normal;
+    margin: 0.5rem 0;
+    margin-top: 1rem;
+    font-style: 1.6rem;
+  }
+  & p {
+    color: #eee;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-top: 0.7rem;
+  }
+}
+
+// Demo styles
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.6rem;
+
+  /* Center slide text vertically */
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.swiper-button {
+  transform: scale(0.7);
+  color: $color-2;
+
+  @include respond(phone) {
+    transform: scale(0.5);
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.swiper-pagination {
+  color: $color-2;
+}
+
+//   section-footer
+.footer {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: $color-2 !important;
+}
+.footer-container {
+  padding: 2rem;
+  text-align: center;
+}
+.footer-text {
+  font-family: $ff-lato;
+  font-size: 1.8rem;
+  color: #eee;
+}

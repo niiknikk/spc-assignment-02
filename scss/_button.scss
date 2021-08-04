@@ -1,0 +1,52 @@
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0;
+    transition: all 0.2s ease-in;
+    
+        &:active{
+            outline: none;
+        }
+        &:focus{
+            outline: none;
+        }
+
+    &-primary{
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        padding: 1.4rem 1.6rem;
+        border-radius: 5rem;
+        color: $color-5;
+        font-weight: 400;
+        background: #fff;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+
+        @include respond(phone){
+            font-size: 1.4rem;
+            padding: 1.2rem 1.4rem;
+        }
+
+        &:hover{
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            
+        }
+        
+    }
+    &-submit{
+        border: 2px solid $color-1;
+        color: #fff;
+        background-color: $color-1;
+        padding: 1rem 1.6rem;
+        &:hover{
+            border: 2px solid $color-1;
+            background-color: transparent;
+            color: $color-1;
+        }
+    }
+}

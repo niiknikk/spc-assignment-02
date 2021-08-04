@@ -1,0 +1,189 @@
+
+
+
+// #star{
+//     animation: star 2.5s linear infinite;
+//     transform-origin: center;
+//     transform-box: fill-box;
+// }
+#bulb{
+    animation: bulb 1.7s linear infinite alternate;
+ 
+}
+
+// #path202, #path16, #path18, #path204, #path50, #path116
+// {
+//     animation:path 3s linear 0s infinite alternate;
+// }
+
+// #hat{
+//     animation: hat-wobble 2s linear 2s infinite alternate forwards;
+//     transform-origin: center;
+//     transform-box: fill-box;
+// }
+
+// #apple{
+//     animation: apple 2s linear 0s infinite alternate-reverse forwards;
+//     transform-origin: center;
+//     transform-box: fill-box;
+// }
+// #mail{
+//     animation: mail 1s linear 0s infinite alternate-reverse forwards;
+// }
+// #contact, #notebook{
+//     animation: contact 3s cubic-bezier(.55,.085,.68,.53) infinite alternate both;
+//     transform-origin: center;
+//     transform-box: fill-box;
+// }
+
+// #file{
+//     animation: flip-file 2s cubic-bezier(.455,.03,.515,.955) infinite alternate both;
+//     transform-origin: center;
+//     transform-box: fill-box;
+// }
+
+// #certificate{
+//     animation:shake 2s linear infinite alternate forwards;
+//     transform-origin: center;
+//     transform-box: fill-box;
+// }
+
+// -----------------animation-----------------
+@keyframes star {
+    to{
+        transform: rotateZ(0deg);
+    }
+    from{
+        transform: rotateZ(360deg);        
+    }
+}
+
+@keyframes bulb {
+    to{
+        opacity: 0;
+    }
+    from{
+        opacity: 1;
+    }
+}
+
+@keyframes path {
+    0%,
+    50%,
+    100% {
+      opacity: 0;
+    }
+  
+    25%,
+    75% {
+      opacity: 1;
+    }
+  }
+
+
+
+  @keyframes hat-wobble {
+    // previous one
+    // 0%,
+    // 100% {
+    //   transform: rotate(0deg);
+    //   transform-origin: 50% 100%;
+    // }
+  
+    // 10% {
+    //   transform: rotate(2deg);
+    // }
+  
+    // 20%,
+    // 40%,
+    // 60% {
+    //   transform: rotate(-4deg);
+    // }
+  
+    // 30%,
+    // 50%,
+    // 70% {
+    //   transform: rotate(4deg);
+    // }
+  
+    // 80% {
+    //   transform: rotate(-2deg);
+    // }
+  
+    // 90% {
+    //   transform: rotate(2deg);
+    // }
+    0% {
+      transform: translate(-40px, -50px);
+    }
+  
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes apple {
+    0% {
+      opacity: .8;
+      transform: translateX(0px) rotate(-200deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(80px) rotate(0deg);
+    }
+  }
+
+  @keyframes mail {
+    0% {
+      transform: translate(-40px, -50px);
+    }
+  
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes contact {
+    // 0%{
+    //     transform:scale(1)
+    //     ;opacity:1
+    // }100%{
+    //     transform:scale(0)
+    //     ;opacity:1
+    // }
+    0% {
+      transform: translate(-40px, -50px);
+    }
+  
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes flip-file {
+      0%{
+          transform:translateZ(0) rotateY(0)
+        }
+        100%{
+            transform:translateZ(160px) rotateY(180deg)
+        }
+      // 0% {
+      //   transform: translate(40px, -50px);
+      // }
+    
+      // 100% {
+      //   transform: translate(0, 0);
+      // }
+    }
+
+    @keyframes shake {
+      // 0%,100%{transform:rotate(0deg);transform-origin:50% 50%}10%{transform:rotate(8deg)}20%,40%,60%{transform:rotate(-10deg)}30%,50%,70%{transform:rotate(10deg)}80%{transform:rotate(-8deg)}90%{transform:rotate(8deg)}
+      0% {
+        transform: translate(40px, 50px);
+      }
+    
+      100% {
+        transform: translate(0, 0);
+      }
+    }
